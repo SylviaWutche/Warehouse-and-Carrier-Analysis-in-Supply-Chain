@@ -1,4 +1,5 @@
 /* IDENTIFY TOP PERFORMING CARRIERS FOR EACH SERVICE LEVEL */
+-- This query identifies the top performing carriers based on service level performance, including total orders, late orders, on-time orders, and on-time delivery percentage.
 
 SELECT 
     ol.Carrier,
@@ -27,6 +28,8 @@ ORDER BY ontime_delivery_percentage DESC;
 
 
 /* IDENTIFY THE MOST COST_EFFECTIVE CARRIER */
+--This query identifies the most cost-effective carrier based on total cost, total orders, total throughput time, and cost efficiency.
+
 
 SELECT 
     ol.Carrier,
@@ -43,6 +46,8 @@ ORDER BY cost_efficiency DESC;
 
 
 /* PERFORMANCE OF CARRIER BASED ON SHIPMENT VOLUME AND MARKET SHARE */
+--This query analyzes the performance of carriers based on shipment volume and market dominance.
+
 
 SELECT 
     Carrier,
@@ -58,6 +63,7 @@ ORDER BY shipment_count DESC;
 
 
 /* OPTIMIZING WAREHOUSE CAPACITY ALLOCATION */
+--This query optimizes warehouse capacity allocation by calculating the utilization rate of each warehouse.
 
 SELECT 
     wc.plant_id,
@@ -74,6 +80,7 @@ ORDER BY utilization_rate DESC;
 
 
 /* ANALYZING STORAGE COST ON WAREHOUSES */
+--This query analyzes the storage cost on warehouses by calculating the number of products, total capacity, and total storage cost for each warehouse.
 
 SELECT 
     whc.Plant_ID,
